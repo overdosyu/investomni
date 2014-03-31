@@ -1,0 +1,55 @@
+.user-profile {
+  margin: 50px auto 0px auto;
+  width: 60%;
+}
+
+.user-profile.edit {
+  max-width: 330px;
+  text-align: center
+}
+
+.user-profile.edit .avatar {
+  height: 150px;
+}
+
+.user-profile .author {
+  overflow: hidden;
+}
+
+.user-profile .author .avatar {
+  float: left;
+  height: 150px;
+}
+
+.user-profile .author .info {
+  padding-left: 30px;
+  overflow: hidden;
+}
+
+.user-profile .author .info .name {
+  float: left;
+  margin: 0px;
+}
+
+.user-profile .author .info .edit.btn {
+  overflow: hidden;
+}
+
+.user-profile .recommendations .recommendation {
+  margin: 40px 0px;
+}
+
+.user-profile .recommendations .recommendation a {
+  color: inherit;
+}
+
+.user-profile .recommendations .recommendation a:hover {
+  /*color: #428BC9;*/
+  text-decoration: none;
+}
+
+.user-profile .recommendations .recommendation .bubble:after {
+  top: -20px;
+  left: 100px;
+  border-width: 20px 0px 0px 20px;
+}

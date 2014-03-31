@@ -1,0 +1,55 @@
+<div class="recommendation">
+  <div class="author">
+    <%= link_to image_tag(@recommendation.user.profile.avatar.url(:normal).to_s, :class => "img-circle avatar"), @recommendation.user.profile %>
+    <%= render partial: "shared/recommendation_detail_bubble", locals: {recommendation: @recommendation} %>
+  </div>
+
+  <div class="comments">
+  <% @comments.each do |comment| %>
+    <div class="comment">
+      <%= link_to image_tag(comment.user.profile.avatar.url(:thumb).to_s, :class => "img-circle avatar"), comment.user.profile %>
+      <div class="bubble">
+        <div class="content">
+          <%= comment.content %>
+        </div>
+        <div class="footer">
+          <span class="date"><%= pretty_date comment.created_at %></span>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <div class="comment new">
+      <%= image_tag current_user.profile.avatar.url(:thumb).to_s, :class => "img-circle avatar" %>
+      <div class="bubble">
+        <%= form_for [@recommendation, Comment.new()] do |f| %>
+          <div class="field">
+            <%= f.text_area :content, :placeholder => "write a comment..." %>
+          </div>
+          <div class="actions hidden">
+            <button type="submit" class="btn btn-primary pull-right">
+              <span class="glyphicon glyphicon-comment"></span>
+              Create Comment
+            </button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  </div>
+
+
+
+
+
+
+  <p>
+    <strong>Price:</strong>
+    <%= @recommendation.price %>
+  </p>
+
+
+  <%= link_to 'Comments', recommendation_comments_path(@recommendation) %> |
+  <%= link_to 'Edit', edit_recommendation_path(@recommendation) %> |
+</div>

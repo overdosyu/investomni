@@ -1,0 +1,22 @@
+<div class="devise passwords well">
+
+  <h3 class="title">Forgot your password?</h3>
+  <br>
+
+  <%= form_for resource, :as => resource_name, :url => password_path(resource_name), html: {method: :post, role: "form"} do |f| %>
+    <%= devise_error_messages! %>
+
+    <%= f.email_field :email, class: "form-control", placeholder: "Email Address", autofocus: true %>
+    <br>
+
+
+    <button type="submit" class="btn btn-primary btn-lg btn-block">
+      <span class="glyphicon glyphicon-refresh"></span>&nbsp;
+      Reset my Password
+    </button>
+  <% end %>
+
+  <br>
+  <%= render "devise/shared/links" %>
+
+</div>

@@ -1,0 +1,5 @@
+@import url('http://getbarometer.s3.amazonaws.com/assets/barometer/css/barometer.css');
+
+#barometer_overlay #barometer_main #overlay_header {
+  height: 37px;
+}

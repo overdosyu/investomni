@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Investomni</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrap">
+
+  <nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">investomni</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="create-recommendation">
+          </bttton>
+          <%= button_to new_recommendation_path, :class => "btn btn-primary btn-sm", :method => "get" do %>
+            <span class="glyphicon glyphicon-plus"></span>
+          <% end %>
+        </li>
+        <li class="dropdown">
+        <% if user_signed_in? %>
+          <%= link_to image_tag(current_user.profile.avatar.url(:thumb).to_s, :class => "img-circle avatar"), current_user.profile %>
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to current_user.profile do %>
+                <span class="glyphicon glyphicon-user"></span> My Profile
+              <% end %>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete, :class => "gray" do %>
+                <span class="glyphicon glyphicon-off"></span> Sign Out
+              <% end %>
+            </li>
+          </ul>
+        <% else %>
+        <%= link_to new_user_session_path, :class => 'navbar-link' do %>
+          <span class="glyphicon glyphicon-log-in"></span> Sign In
+        <% end %>
+        <% end %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <% flash.each do |type, messsage| %>
+      <div class="alert <%= bootstrap_type(type) %> alert-dismissable fade in">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= messsage %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </div>
+</div>  <!-- id="wrap" -->
+
+<footer>
+  <div class="container">
+    YK Studio 2014
+  </div>
+</footer>
+
+<!-- Latest compiled and minified JavaScript -->
+<!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
+
+
+<!-- feedback tab from http://getbarometer.com/ -->
+<script src='http://getbarometer.s3.amazonaws.com/assets/barometer/javascripts/barometer.js' type='text/javascript'></script>
+<script type="text/javascript" charset="utf-8">
+  BAROMETER.load('mtZbZG5n45xjsfNzeSOwF');
+</script>
+
+
+</body>
+</html>

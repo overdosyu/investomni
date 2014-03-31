@@ -1,0 +1,22 @@
+<div class="bubble">
+  <h4 class="symbol">
+    <span class="label <%= ((recommendation.action == :buy) ? 'label-success' : (recommendation.action == :sell) ? 'label-danger' : 'label-warning')%>">
+      <span class="<%= ((recommendation.action == :buy) ? 'glyphicon glyphicon-arrow-up' : (recommendation.action == :sell) ? 'glyphicon glyphicon-arrow-down' : '')%>"></span>
+      <%= recommendation.symbol %>
+    </span>
+    <% if recommendation.stock_quote %>
+    <span class="name">
+      <%= recommendation.stock_quote.name %>
+    </span>
+    <span class="price pull-right">
+      <%= number_to_currency(recommendation.stock_quote.last_trade_price_only) %>
+    </span>
+    <% end %>
+  </h4>
+  <h3><%= title(recommendation) %></h3>
+  <h4 class="result"><%= result_str(recommendation).html_safe %></h4>
+  <div><%= recommendation.note %></div>
+  <div class="footer">
+    <span class="date"><%= pretty_date recommendation.created_at %></span>
+  </div>
+</div>

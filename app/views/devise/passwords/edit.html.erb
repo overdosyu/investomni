@@ -1,0 +1,20 @@
+<div class="devise passwords well">
+  <h3 class="title">Change Your Password</h3>
+  <br>
+
+  <%= form_for resource, :as => resource_name, :url => password_path(resource_name), html: {method: :put, role: "form"} do |f| %>
+    <%= devise_error_messages! %>
+    <%= f.hidden_field :reset_password_token %>
+
+    <%= f.password_field :password, class: "form-control", placeholder: "New Password", autofocus: true %>
+    <br>
+
+    <button type="submit" class="btn btn-primary btn-lg btn-block">
+      <span class="glyphicon glyphicon-refresh"></span>&nbsp;
+      Change My Password
+    </button>
+  <% end %>
+
+  <br>
+  <%= render "devise/shared/links" %>
+</div>

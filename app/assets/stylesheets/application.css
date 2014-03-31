@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap.min
+ *= require_self
+ *= require_tree .
+ */
+
+/*rgb(106, 204, 234)*/
+/*rgb(234, 242, 245)*/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  padding-top: 70px;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  margin-bottom: -120px;  /*footer height*/
+  padding-bottom: 120px;  /*footer height*/
+}
+
+footer {
+  background: rgba(35, 45, 59, 0.75);
+  color: #888;
+  height: 120px;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.navbar {
+  background: rgba(35, 45, 59, 0.9);
+  padding: 10px 0px;
+}
+
+.navbar>.container {
+  width: 60%
+}
+
+.navbar-header {
+  position: absolute;
+  left: 50%;
+  margin-left: -88px !important;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: white;
+  background: inherit;
+}
+
+.navbar-link {
+  color: white;
+}
+
+.navbar .create-recommendation {
+  padding: 10px 5px;
+}
+
+.navbar .dropdown a:hover {
+  background: inherit;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar .avatar {
+  margin: -10px 0px;
+  height: 40px;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;    
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 999px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+/* .edit_user_profile */
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}
+
+.one-row {
+  display: inline-block !important;
+}
+
+.one-row input, select {
+  display: inline-block !important;
+  margin-right: 20px;
+  width: auto !important;
+}
+
+
+#error_explanation h2 {
+  color: LightCoral;
+  font-size: 12px;
+  margin-top: -15px;
+}
+
+#error_explanation ul {
+  color: LightCoral;
+  font-size: 12px;
+  text-align: left;
+}
+
+.alert {
+  margin: 0px auto 20px auto;
+  width: 70%;
+}

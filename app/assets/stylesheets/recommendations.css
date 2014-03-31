@@ -1,0 +1,116 @@
+.container>.recommendation {
+  margin: 50px auto 0px auto;
+  width: 70%;
+}
+
+.recommendation .bubble {
+  position: relative;
+  padding: 8px 25px 20px 25px;
+  background: rgb(234, 242, 245);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.recommendation .bubble:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  border-width: 0 20px 20px 0px;
+  border-style: solid;
+  border-color: transparent rgb(234, 242, 245);
+  display: block;
+  width: 0;
+}
+
+.recommendation .bubble .footer .date {
+  color: gray;
+  font-size: 85%;
+}
+
+.recommendation .author {
+  position: relative;
+  overflow: hidden;
+}
+
+.recommendation .author .avatar {
+  width: 100px;
+  float: left;
+}
+
+.recommendation .author .bubble {
+  left: 35px;
+  width: 70%;
+  float: left;
+}
+
+.recommendation .author .bubble .symbol .name {
+  margin-left: 10px;
+  color: gray;
+}
+
+.recommendation .bubble .result {
+  font-size: 16px;
+  color: gray;
+}
+
+.recommendation .bubble .result .success {
+  font-size: 30px;
+  color: green;
+}
+
+.recommendation .bubble .result .fail {
+  font-size: 30px;
+  color: red;
+}
+
+.recommendation .comments {
+  margin-left: 135px;
+}
+
+.recommendation .comments .comment {
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.recommendation .comments .comment .avatar {
+  float: left;
+  height: 40px;
+}
+
+.recommendation .comments .comment .bubble {
+  float: left;
+  left: 23px;
+  padding: 10px 25px 10px 17px;
+  width: 75%;
+}
+
+.recommendation .comments .comment .bubble:after {
+  top: 10px;
+  left: -15px;
+  border-width: 0 15px 15px 0px;
+}
+
+.recommendation.new .title {
+  color: gray;
+  margin-left: 160px;
+}
+
+.recommendation.new .bubble {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.recommendation.new .bubble textarea {
+  max-height: 200px;
+}
+
+textarea {
+  border: none;
+  height: 27px;
+  width: 100%;
+  max-width: 100%;
+  max-height: 87px;
+}

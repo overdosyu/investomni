@@ -1,0 +1,33 @@
+<div class="devise sessions well">
+  <h3 class="title">Welcome Back</h3>
+  <br>
+
+  <%= button_to user_omniauth_authorize_path(:facebook), :class => "btn btn-facebook btn-lg btn-block" do %>
+    Sign in with Facebook
+  <% end %>
+
+  <hr>
+
+  <%= form_for resource, :as => resource_name, :url => session_path(resource_name), html: {role: "form"} do |f| %>
+    <p>Or use your email address</p>
+
+    <%= f.email_field :email, class: "form-control", placeholder: "Email Address", autofocus: true %>
+    <br>
+
+    <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+    <br>
+
+<!--     <% if devise_mapping.rememberable? %>
+      <div><%= f.check_box :remember_me %> <%= f.label :keep_me_signed_in %></div>
+    <% end %>
+ -->
+    <button type="submit" class="btn btn-default btn-lg btn-block">
+      <span class="glyphicon glyphicon-log-in"></span>&nbsp;
+      Sign In
+    </button>
+  <% end %>
+
+  <br>
+  <%= render "devise/shared/links" %>
+
+</div>

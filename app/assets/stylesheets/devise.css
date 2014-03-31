@@ -1,0 +1,55 @@
+.devise {
+  color: gray;
+  margin: 50px auto 0px auto;
+  max-width: 330px;
+  text-align: center;
+}
+
+.devise label {
+  font-weight: normal;
+}
+
+.devise a:hover {
+  color: #428bca;
+}
+
+.devise .btn-facebook {
+  color: white;
+  background-color: #3b5998;
+  border-color: rgba(0,0,0,0.2);
+}
+
+.devise .btn-facebook:hover {
+  color: white;
+  background-color: #30487C;
+  border-color: rgba(0,0,0,0.2);
+}
+
+.devise .btn-default {
+  background-color: #ebebeb;
+  color: gray;
+}
+
+.devise .btn-default:hover {
+  background-color: #e1e1e1;
+  color: gray;
+}
+
+.devise hr {
+  margin-bottom: 10px;
+  border-top: 1px solid #ddd;
+}
+
+
+/* moved to application.css
+.devise #error_explanation h2 {
+  color: LightCoral;
+  font-size: 12px;
+  margin-top: -15px;
+}
+
+.devise #error_explanation ul {
+  color: LightCoral;
+  font-size: 12px;
+  text-align: left;
+}*/

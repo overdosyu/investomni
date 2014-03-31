@@ -1,0 +1,24 @@
+<div class="home">
+  <h1><strong>Share your invest portfolio.</strong> <span>Show your talent.</span></h1>
+
+
+  <br><br>
+  <div class="recommendations row">
+  <% @recommendations.each do |recommendation| %>
+    <div class="col-xs-6 col-md-4">
+      <%= link_to recommendation do %>
+        <div class="bubble">
+          <h4>
+            <span class="label <%= ((recommendation.action == :buy) ? 'label-success' : (recommendation.action == :sell) ? 'label-danger' : 'label-warning')%>">
+              <span class="<%= ((recommendation.action == :buy) ? 'glyphicon glyphicon-arrow-up' : (recommendation.action == :sell) ? 'glyphicon glyphicon-arrow-down' : '')%>"></span>
+              <%= recommendation.symbol %>
+            </span>
+          </h4>
+          <%= truncate(recommendation.note, length: 200) %>
+        </div>
+        <div class="author"><%= link_to recommendation.user.name, recommendation.user.profile %></div>
+      <% end %>
+    </div>
+  <% end %>
+  </div>
+</div>
