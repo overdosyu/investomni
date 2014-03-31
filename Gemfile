@@ -5,6 +5,8 @@ gem 'rails', '4.0.0'
 
 group :production, :staging do
   gem "pg"
+  # https://devcenter.heroku.com/articles/ruby-support#rails-4-x-applications
+  gem 'rails_12factor'
 end
 
 group :development, :test do
