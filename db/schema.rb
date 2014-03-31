@@ -72,21 +72,6 @@ ActiveRecord::Schema.define(version: 20140314214014) do
 
   add_index "recommendations", ["user_id"], name: "index_recommendations_on_user_id"
 
-  create_table "trades", force: true do |t|
-    t.string   "action"
-    t.string   "symbol"
-    t.integer  "shares"
-    t.float    "price"
-    t.integer  "admin_user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-  end
-
-  add_index "trades", ["admin_user_id"], name: "index_trades_on_admin_user_id"
-  add_index "trades", ["symbol"], name: "index_trades_on_symbol"
-  add_index "trades", ["user_id"], name: "index_trades_on_user_id"
-
   create_table "user_profiles", force: true do |t|
     t.string   "avatar"
     t.integer  "user_id"

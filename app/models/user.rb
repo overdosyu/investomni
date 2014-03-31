@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:facebook]
 
   has_one :user_profile
-  has_many :trades
   has_many :recommendations
   has_many :comments
 
