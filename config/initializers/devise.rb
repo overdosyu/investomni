@@ -230,7 +230,8 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
 
   require "omniauth-facebook"
-  config.omniauth :facebook, "270233593144957", "5870620db3371ada369943cdec418e32"
+  API_KEYS = YAML::load_file("#{Rails.root}/config/api_keys.yml")[Rails.env]
+  config.omniauth :facebook, API_KEYS['facebook']['api_key'], API_KEYS['facebook']['api_secret']
 
 
   # ==> Warden configuration
