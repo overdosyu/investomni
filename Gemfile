@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
 group :production, :staging do
-  gem "pg"
+  gem 'pg'
   # https://devcenter.heroku.com/articles/ruby-support#rails-4-x-applications
   gem 'rails_12factor'
 end
