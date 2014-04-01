@@ -15,6 +15,8 @@
 // require turbolinks
 //= require holder
 //= require bootstrap.min
+//= require barometer
 //= require_tree .
 
 Holder.add_theme("bright", { background: "rgb(35, 45, 59)", foreground: "grey", size: 12 })
+BAROMETER.load('mtZbZG5n45xjsfNzeSOwF');

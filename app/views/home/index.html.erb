@@ -1,11 +1,10 @@
 <div class="home">
-  <h1><strong>Share your invest portfolio.</strong> <span>Show your talent.</span></h1>
-
+  <h1>Tracking & Share your invest idea.</h1>
 
   <br><br>
-  <div class="recommendations row">
+  <div class="recommendations" id="container">
   <% @recommendations.each do |recommendation| %>
-    <div class="col-xs-6 col-md-4">
+    <div class="item grid-sizer">
       <%= link_to recommendation do %>
         <div class="bubble">
           <h4>

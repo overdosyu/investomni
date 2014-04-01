@@ -11,6 +11,7 @@
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  width: 100%;
 }
 
 .home .recommendations .bubble:after {
@@ -35,7 +36,19 @@
 }
 
 .home .recommendations a:hover {
-  /*color: #428BC9;*/
   text-decoration: none;
   opacity: .7;
+}
+
+/* pinterest style by http://masonry.desandro.com/ */
+@media (max-width: 699px) {
+  .grid-sizer { width: 100%; }
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+  .grid-sizer { width: 45%; }
+}
+
+@media (min-width: 1200px) {
+  .grid-sizer { width: 30%; }
 }
