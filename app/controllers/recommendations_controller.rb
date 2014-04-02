@@ -111,8 +111,8 @@ class RecommendationsController < InheritedResources::Base
   end
 
   # GET /recommendations/1/edit
-  def edit
-  end
+  # def edit
+  # end
 
   # POST /recommendations
   # POST /recommendations.json
@@ -136,27 +136,27 @@ class RecommendationsController < InheritedResources::Base
 
   # PATCH/PUT /recommendations/1
   # PATCH/PUT /recommendations/1.json
-  def update
-    respond_to do |format|
-      if @recommendation.update(recommendation_params)
-        format.html { redirect_to @recommendation, notice: 'Recommendation was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @recommendation.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @recommendation.update(recommendation_params)
+  #       format.html { redirect_to @recommendation, notice: 'Recommendation was successfully updated.' }
+  #       format.json { head :no_content }
+  #     else
+  #       format.html { render action: 'edit' }
+  #       format.json { render json: @recommendation.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /recommendations/1
   # DELETE /recommendations/1.json
-  def destroy
-    @recommendation.destroy
-    respond_to do |format|
-      format.html { redirect_to recommendations_url }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @recommendation.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to recommendations_url }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

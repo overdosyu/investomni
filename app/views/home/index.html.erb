@@ -1,7 +1,9 @@
 <div class="home">
+  <% unless user_signed_in? %>
   <h1>Tracking & Share your invest idea.</h1>
-
   <br><br>
+  <% end %>
+
   <div class="recommendations" id="container">
   <% @recommendations.each do |recommendation| %>
     <div class="item grid-sizer">

@@ -9,7 +9,7 @@ Investomni::Application.routes.draw do
   resources :user_profiles, only: [:edit, :update, :show]
 
   get '/users/:user_id/recommendations', to: 'recommendations#index', as: :user_recommendations
-  resources :recommendations, :except => :index do
+  resources :recommendations, only: [:show, :new, :create] do
     resources :comments, shallow: true
   end
 
