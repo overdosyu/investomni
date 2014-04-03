@@ -5,13 +5,17 @@
     <div class="info">
       <h3 class="name"><%= @user_profile.user.name %></h3>
       <% if @user_profile.user == current_user %>
-      <!-- <button type="button" class="btn btn-default btn-sm pull-right edit"> -->
       <%= link_to edit_user_profile_path, :class => "btn btn-default btn-sm pull-right edit" do %>
         <span class="glyphicon glyphicon-edit"></span>
         Edit Profile
       <% end %>
-      <!-- </button> -->
       <% end %>
+      <div class="stats">
+        <h1>
+          <span class="glyphicon glyphicon-stats"></span> stats
+        </h1>
+        work in progress...
+      </div>
     </div>
   </div>
 

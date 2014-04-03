@@ -31,6 +31,19 @@
   margin: 0px;
 }
 
+.user-profile .author .info .stats {
+  border-color: gray;
+  border-style: dashed;
+  border-width: 2px;
+  color: gray;
+  margin-top: 40px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  height: 110px;
+  text-align: center;
+}
+
 .user-profile .author .info .edit.btn {
   overflow: hidden;
 }
