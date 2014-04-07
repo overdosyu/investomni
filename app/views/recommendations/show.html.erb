@@ -1,6 +1,9 @@
 <div class="recommendation">
   <div class="author">
-    <%= link_to image_tag(@recommendation.user.profile.avatar.url(:normal).to_s, :class => "img-circle avatar"), @recommendation.user.profile %>
+    <div class="info">
+      <%= link_to image_tag(@recommendation.user.profile.avatar.url(:normal).to_s, :class => "img-circle avatar"), @recommendation.user.profile %>
+      <%= link_to @recommendation.user.name, @recommendation.user.profile %>
+    </div>
     <%= render partial: "shared/recommendation_detail_bubble", locals: {recommendation: @recommendation} %>
   </div>
 
@@ -10,6 +13,7 @@
       <%= link_to image_tag(comment.user.profile.avatar.url(:thumb).to_s, :class => "img-circle avatar"), comment.user.profile %>
       <div class="bubble">
         <div class="content">
+          <%= link_to comment.user.name, comment.user.profile %>
           <%= comment.content %>
         </div>
         <div class="footer">

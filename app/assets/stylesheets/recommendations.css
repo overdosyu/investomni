@@ -38,9 +38,16 @@
   overflow: hidden;
 }
 
-.recommendation .author .avatar {
-  width: 100px;
+.recommendation .author .info {
+  color: gray;
   float: left;
+  line-height: 35px;
+  text-align: center;
+  width: 100px;
+}
+
+.recommendation .author .info .avatar {
+  width: 100px;
 }
 
 .recommendation .author .bubble {
