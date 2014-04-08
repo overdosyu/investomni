@@ -3,7 +3,10 @@
   <h3 class="title">Prove Your Analytical Skill</h3>
 
   <div class="author">
-    <%= link_to image_tag(current_user.profile.avatar.url(:normal).to_s, :class => "img-circle avatar"), current_user.profile %>
+    <div class="info">
+      <%= link_to image_tag(current_user.profile.avatar.url(:normal).to_s, :class => "img-circle avatar"), current_user.profile %>
+      <%= link_to current_user.name, current_user.profile %>
+    </div>
     <div class="bubble">
     	<!-- , :html => {:class => "form-inline"} -->
       <%= form_for @recommendation do |f| %>
