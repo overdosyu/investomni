@@ -31,18 +31,7 @@
   margin: 0px;
 }
 
-.user-profile .author .info .stats {
-  border-color: gray;
-  border-style: dashed;
-  border-width: 2px;
-  color: gray;
-  margin-top: 40px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  height: 110px;
-  text-align: center;
-}
+
 
 .user-profile .author .info .edit.btn {
   overflow: hidden;
@@ -66,3 +55,73 @@
   left: 100px;
   border-width: 20px 0px 0px 20px;
 }
+
+.user-profile .author .info .stats {
+  color: gray;
+  margin-top: 40px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  height: 110px;
+}
+
+.user-profile .author .info .stats.empty {
+  border-color: gray;
+  border-style: dashed;
+  border-width: 2px;
+  text-align: center;
+}
+
+.user-profile .author .info .stats>div {
+  float: left;
+}
+
+.user-profile .author .info .stats .score {
+  line-height: 100px;
+  font-size: 55px;
+}
+
+
+/* stats chart */
+.bargraph {
+  list-style: none;
+  padding: 20px 0px 20px 10px;
+  width: 300px;
+}
+
+ul.bargraph li {
+  height: 20px;
+  text-align: left;
+  line-height: 20px;
+  margin-bottom: 3px;
+  -webkit-animation: draw 1s ease-in-out; /* Chrome, Safari, Opera */
+  animation: draw 1s ease-in-out;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes draw {
+  0% {width:0;}
+}
+
+/* Standard syntax */
+@keyframes draw {
+  0% {width:0;}
+}
+
+ul.bargraph li.buy {
+  background: #5cb85c;
+}
+
+ul.bargraph li.sell {
+  background: #d9534f;
+}
+
+ul.bargraph li.hold {
+  background: #f0ad4e;
+}
+
+ul.bargraph li.empty {
+  background: LightGray;
+}
+
+ 

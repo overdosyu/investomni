@@ -66,7 +66,7 @@ class RecommendationsController < InheritedResources::Base
 
           old_result = @recommendation.result
 
-          p old_result, new_result
+          # p old_result, new_result
 
           if old_result.blank?  # never success
             if new_result[:action] == :hold

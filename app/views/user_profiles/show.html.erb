@@ -10,12 +10,39 @@
         Edit Profile
       <% end %>
       <% end %>
+      <% if @success_percent %>
       <div class="stats">
+        <div class="score"><%= @success_percent %>%</div>
+        <div class="chart">
+          <ul class="bargraph">
+            <% if @buy_success_percent %>
+            <li class="buy" style="width:<%= @buy_success_percent %>%">&nbsp;&nbsp;&nbsp;<%= @buy_success_percent %>%</li>
+            <% else %>
+            <li class="empty"></li>
+            <% end %>
+
+            <% if @sell_success_percent %>
+            <li class="sell" style="width:<%= @sell_success_percent %>%">&nbsp;&nbsp;&nbsp;<%= @sell_success_percent %>%</li>
+            <% else %>
+            <li class="empty"></li>
+            <% end %>
+
+            <% if @hold_success_percent %>
+            <li class="hold" style="width:<%= @hold_success_percent %>%">&nbsp;&nbsp;&nbsp;<%= @hold_success_percent %>%</li>
+            <% else %>
+            <li class="empty"></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <% else %>
+      <div class="stats empty">
         <h1>
           <span class="glyphicon glyphicon-stats"></span> stats
         </h1>
-        work in progress...
+        don't have any finalized recommendation yet...
       </div>
+      <% end %>
     </div>
   </div>
 
