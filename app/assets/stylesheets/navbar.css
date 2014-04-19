@@ -1,0 +1,96 @@
+.navbar {
+  background: rgba(35, 45, 59, 0.9);
+  padding: 10px 0px;
+}
+
+.navbar>.container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.navbar-header .navbar-toggle {
+  z-index: 100;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  width: 50%;
+  text-align: center;
+}
+
+.navbar-brand a {
+  color: white;
+}
+
+.navbar-brand a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: white;
+  background: inherit;
+}
+
+.navbar-link {
+  color: white;
+}
+
+.navbar .create-recommendation {
+  padding: 10px 5px;
+}
+
+.navbar .create-recommendation:hover .btn-text {
+  display: inline;
+}
+
+.navbar .create-recommendation .btn-text {
+  display: none;
+  font-size: 13px;
+}
+
+.navbar .dropdown a:hover {
+  color: gray;
+  background: inherit;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar #bs-navbar-collapse {
+  text-align: right;
+}
+
+.navbar #bs-navbar-collapse a {
+  color: white;
+}
+
+.navbar #bs-navbar-collapse a:hover {
+  background: inherit;
+}
+
+.navbar .avatar {
+  margin: -10px 0px;
+  height: 40px;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;    
+}
+
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0px;
+  }
+  .navbar>.container {
+    width: 65%;
+  }
+  .navbar-brand {
+    width: 65%;
+  }
+}

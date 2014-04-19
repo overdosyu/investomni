@@ -80,57 +80,6 @@ footer {
   text-align: center;
 }
 
-.navbar {
-  background: rgba(35, 45, 59, 0.9);
-  padding: 10px 0px;
-}
-
-.navbar>.container {
-  width: 60%
-}
-
-.navbar-header {
-  position: absolute;
-  left: 50%;
-  margin-left: -88px !important;
-}
-
-.navbar-brand {
-  color: white;
-  font-size: 30px;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  color: white;
-  background: inherit;
-}
-
-.navbar-link {
-  color: white;
-}
-
-.navbar .create-recommendation {
-  padding: 10px 5px;
-}
-
-.navbar .dropdown a:hover {
-  background: inherit;
-}
-
-.navbar-toggle .icon-bar {
-  background-color: white;
-}
-
-.navbar .avatar {
-  margin: -10px 0px;
-  height: 40px;
-}
-
-.navbar .dropdown:hover .dropdown-menu {
-  display: block;    
-}
-
 .btn-file {
   position: relative;
   overflow: hidden;
