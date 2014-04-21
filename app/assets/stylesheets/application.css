@@ -134,3 +134,18 @@ input[readonly] {
   margin: 0px auto 20px auto;
   width: 70%;
 }
+
+footer .container .symbol {
+  font-size: 300%;
+  margin: 0px 50px;
+}
+
+/* iphone */
+@media (max-width: 640px) {
+  footer .container .symbol {
+    margin: 0px 20px;
+  }
+}
+
+
+
