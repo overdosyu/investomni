@@ -4,9 +4,10 @@
 }
 
 .navbar>.container {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
   padding: 0;
+  max-width: 850px;
 }
 
 .navbar-header .navbar-toggle {
@@ -17,8 +18,9 @@
   color: white;
   font-size: 30px;
   position: absolute;
-  width: 50%;
+  width: 70%;
   text-align: center;
+  max-width: 850px;
 }
 
 .navbar-brand a {
@@ -82,8 +84,7 @@
   display: block;    
 }
 
-/* iphone */
-@media (max-width: 640px) {
+@media (max-width: 360px) { /* phone portrait */
   .navbar {
     padding: 0px;
   }
@@ -91,18 +92,46 @@
     width: 90%;
   }
   .navbar-brand {
-    width: 90%;
+    width: 100%;
+  }
+  .navbar-toggle {
+    margin-right: 5px
   }
 }
 
-@media (min-width: 641px) and (max-width: 767px) {
+@media (min-width: 361px) and (max-width: 767px) {  /* phone landscape */
   .navbar {
     padding: 0px;
   }
   .navbar>.container {
-    width: 65%;
+    width: 90%;
   }
   .navbar-brand {
-    width: 65%;
+    width: 95%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {  /* pad portrait */
+  .navbar>.container {
+    width: 75%;
+    max-width: 700px;
+  }
+  .navbar-brand {
+    width: 75%;
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {  /* pad landscape */
+  .navbar {
+    padding: 0px;
+  }
+  .navbar>.container {
+    width: 100%;
+    max-width: 800px;
+  }
+  .navbar-brand {
+    width: 100%;
+    max-width: 800px;
   }
 }

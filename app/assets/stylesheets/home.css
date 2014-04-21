@@ -1,6 +1,6 @@
 .container>.home {
   margin: 50px auto;
-  width: 70%;
+  width: 80%;
 }
 
 .home .recommendations .bubble {
@@ -41,14 +41,38 @@
 }
 
 /* pinterest style by http://masonry.desandro.com/ */
-@media (max-width: 699px) {
+@media (max-width: 360px) {  /* phone portrait 1 grid */
   .grid-sizer { width: 100%; }
+  .container>.home {
+    margin: 10px auto;
+    width: 100%;
+  }
 }
 
-@media (min-width: 700px) and (max-width: 1199px) {
-  .grid-sizer { width: 45%; }
+@media (min-width: 361px) and (max-width: 767px) {  /* phone landscape 2 grids */
+  .grid-sizer { width: 48%; }
+  .container>.home {
+    margin: 10px auto;
+    width: 100%;
+  }
 }
 
-@media (min-width: 1200px) {
-  .grid-sizer { width: 30%; }
+@media (min-width: 768px) and (max-width: 1023px) {  /* pad portrait 2 grids */
+  .grid-sizer { width: 48%; }
+  .container>.home {
+    margin: 30px auto;
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {  /* pad landscape 3 grids */
+  .grid-sizer { width: 32%; }
+  .container>.home {
+    margin: 20px auto;
+    width: 90%;
+  }
+}
+
+@media (min-width: 1200px) {  /* computer 4 grids */
+  .grid-sizer { width: 23%; }
 }
