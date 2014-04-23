@@ -130,12 +130,13 @@ footer .container .symbol {
   margin: 0px 50px;
 }
 
-/* iphone */
-@media (max-width: 640px) {
+@media (max-width: 767px) {  /* phone portrait/landscape */
   footer .container .symbol {
     margin: 0px 20px;
   }
+  #barometer_tab {
+    display: none;
+  }
 }
-
 
 

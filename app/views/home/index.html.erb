@@ -1,7 +1,11 @@
 <div class="home">
   <% unless user_signed_in? %>
-  <h1>Tracking & Share your invest idea.</h1>
-  <br><br>
+  <div class="slogan">
+    Tracking & Share your invest idea.
+    <%= link_to new_user_session_path, :class => 'btn btn-primary' do %>
+      <span class="glyphicon glyphicon-ok-circle"></span> Join or sign in today
+    <% end %>
+  </div>
   <% end %>
 
   <div class="recommendations" id="container">

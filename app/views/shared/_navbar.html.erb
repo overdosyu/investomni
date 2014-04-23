@@ -10,7 +10,7 @@
     <% else %>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse">
         <%= link_to new_user_session_path, :class => 'navbar-link' do %>
-          <span class="glyphicon glyphicon-log-in" style="font-size: 16px;"></span>
+          <span class="glyphicon glyphicon-log-in" style="font-size: 16px;"></span> <span class="sign-in-text">Sign In</span>
         <% end %>
       </button>
     <% end %>
@@ -23,7 +23,6 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li class="create-recommendation">
-          </bttton>
           <%= button_to new_recommendation_path, :class => "btn btn-primary btn-sm", :method => "get" do %>
             <span class="glyphicon glyphicon-plus"></span> <span class="btn-text">Create</span>
           <% end %>

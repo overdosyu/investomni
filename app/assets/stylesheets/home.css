@@ -1,6 +1,13 @@
 .container>.home {
-  margin: 50px auto;
+  margin: 30px auto 50px auto;
   width: 80%;
+}
+
+.home .slogan {
+  color: gray;
+  font-size: 35px;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .home .recommendations .bubble {
@@ -47,6 +54,9 @@
     margin: 10px auto;
     width: 100%;
   }
+  .home .slogan {
+    font-size: 19px;
+  }
 }
 
 @media (min-width: 361px) and (max-width: 767px) {  /* phone landscape 2 grids */
@@ -54,6 +64,9 @@
   .container>.home {
     margin: 10px auto;
     width: 100%;
+  }
+  .home .slogan {
+    font-size: 22px;
   }
 }
 
@@ -70,6 +83,9 @@
   .container>.home {
     margin: 20px auto;
     width: 90%;
+  }
+  .home .slogan {
+    font-size: 30px;
   }
 }
 

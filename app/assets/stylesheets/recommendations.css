@@ -238,6 +238,9 @@ textarea {
     margin-top: 30px;
     width: 90%;
   }
+  .recommendation.new .symbol-input {
+    width: 40%;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {  /* pad landscape */
