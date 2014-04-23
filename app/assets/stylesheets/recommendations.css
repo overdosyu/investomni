@@ -1,5 +1,5 @@
 .container>.recommendation {
-  margin: 50px auto 0px auto;
+  margin: 50px auto 20px auto;
   width: 70%;
 }
 
@@ -118,10 +118,131 @@
   max-height: 200px;
 }
 
+.recommendation.new .symbol-input {
+  float: left;
+  margin-right: 15px;
+}
+
+.recommendation.new .action-input {
+  float: left;
+  margin-right: 15px;
+}
+
+.recommendation.new .term-input {
+  float: left;
+  padding-bottom: 15px
+}
+
+.recommendation.new .note-input {
+  margin-bottom: 20px;
+}
+
 textarea {
   border: none;
   height: 27px;
   width: 100%;
   max-width: 100%;
   max-height: 87px;
+}
+
+@media (max-width: 450px) {  /* phone portrait */
+  .container>.recommendation {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .recommendation .author .info {
+    float: none;
+    margin: 0px auto 15px auto;
+  }
+  .recommendation .bubble:after {
+    top: -20px;
+    left: 200px;
+    border-width: 20px 0px 0px 20px;
+  }
+  .recommendation .author .bubble {
+    left: 0px;
+    top: 15px;
+    width: 100%;
+  }
+  .recommendation .comments {
+    margin-left: 0px;
+  }
+  .recommendation .comments .comment .bubble {
+    width: 78%;
+  }
+
+  /* new rcmd page */
+  .container>.recommendation.new {
+    margin-top: 0px;
+  }
+  .recommendation.new .title {
+    margin: 0px 0px 15px 0px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .recommendation.new .symbol-input {
+    float: none;
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+  .recommendation.new .action-input {
+    width: 47%;
+  }
+  .recommendation.new .term-input {
+    width: 46%;
+  }
+  .recommendation.new .author .bubble {
+    top: 0px;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 767px) {  /* phone landscape */
+  .container>.recommendation {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .recommendation .author .info .avatar {
+    width: 80px;
+  }
+  .recommendation .author .bubble {
+    left: 20px;
+    width: 75%;
+  }
+  .recommendation .comments .comment .bubble {
+    width: 81%;
+  }
+
+  /* new rcmd page */
+  .container>.recommendation.new {
+    margin-top: 0px;
+  }
+  .recommendation.new .title {
+    margin: 0px 0px 15px 145px;
+    font-size: 20px;
+  }
+  .recommendation.new .symbol-input {
+    float: none;
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+  .recommendation.new .action-input {
+    width: 48%;
+  }
+  .recommendation.new .term-input {
+    width: 47%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {  /* pad portrait */
+  .container>.recommendation {
+    margin-top: 30px;
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {  /* pad landscape */
+  .container>.recommendation {
+    margin-top: 10px;
+    width: 80%;
+  }
 }

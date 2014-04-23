@@ -1,5 +1,5 @@
 .user-profile {
-  margin: 50px auto 0px auto;
+  margin: 50px auto 20px auto;
   width: 60%;
 }
 
@@ -30,7 +30,6 @@
   float: left;
   margin: 0px;
 }
-
 
 
 .user-profile .author .info .edit.btn {
@@ -123,5 +122,81 @@ ul.bargraph li.hold {
 ul.bargraph li.empty {
   background: LightGray;
 }
+
+@media (max-width: 450px) {  /* phone portrait */
+  .user-profile {
+    margin-top: 5px;
+    width: 100%;
+  }
+  .user-profile .author {
+    margin-bottom: -30px;
+    text-align: center;
+  }
+  .user-profile .author .avatar {
+    float: none;
+  }
+  .user-profile .author .info {
+    padding: 0px;
+  }
+  .user-profile .author .info .name {
+    float: none;
+  }
+  .user-profile .author .info .stats {
+    margin: 0px;
+  }
+  .user-profile .author .info .stats .score {
+    font-size: 40px;
+  }
+  .bargraph {
+    width: 200px;
+  }
+  .user-profile .author .info .edit.btn {
+    float: none !important;
+    margin-top: 10px;
+  }
+
+}
+
+@media (min-width: 451px) and (max-width: 767px) {  /* phone landscape */
+  .user-profile {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .user-profile .author {
+    margin-bottom: -30px;
+  }
+  .user-profile .author .avatar {
+    height: 125px;
+  }
+  .user-profile .author .info .stats .score {
+    font-size: 48px;
+  }
+  .bargraph {
+    width: 270px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {  /* pad portrait */
+  .user-profile {
+    width: 80%;
+  }
+  .user-profile .author .info .stats .score {
+    font-size: 50px;
+  }
+  .bargraph {
+    width: 285px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {  /* pad landscape */
+  .user-profile {
+    width: 70%;
+  }
+}
+
+
+
+
+
 
  

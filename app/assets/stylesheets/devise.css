@@ -1,6 +1,6 @@
 .devise {
   color: gray;
-  margin: 50px auto 0px auto;
+  margin: 50px auto;
   max-width: 330px;
   text-align: center;
 }
@@ -53,3 +53,9 @@
   font-size: 12px;
   text-align: left;
 }*/
+
+@media (max-width: 767px) {  /* phone portrait/landscape */
+  .devise {
+    margin: 5px auto 20px auto;
+  }
+}

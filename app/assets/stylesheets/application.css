@@ -107,24 +107,14 @@ input[readonly] {
   cursor: text !important;
 }
 
-.one-row {
-  display: inline-block !important;
-}
 
-.one-row input, select {
-  display: inline-block !important;
-  margin-right: 20px;
-  width: auto !important;
-}
-
-
-#error_explanation h2 {
+#error-explanation h2 {
   color: LightCoral;
   font-size: 12px;
   margin-top: -15px;
 }
 
-#error_explanation ul {
+#error-explanation ul {
   color: LightCoral;
   font-size: 12px;
   text-align: left;
