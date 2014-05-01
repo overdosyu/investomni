@@ -16,4 +16,28 @@ module ApplicationHelper
     end
   end
 
+  def page_title(subtitle = nil)
+    if subtitle.present?
+      content_for :title, subtitle
+    else
+      content_for?(:title) ? content_for(:title) + ' - investomni' : 'investomni'
+    end
+  end
+
+  def meta_keywords(tags = nil)  # for SEO
+    if tags.present?
+      content_for :meta_keywords, tags
+    else
+      content_for?(:meta_keywords) ? [content_for(:meta_keywords), APP_CONFIG['default_meta_keywords']].join(', ') : APP_CONFIG['default_meta_keywords']
+    end
+  end
+
+  def meta_description(desc = nil)  # for SEO
+    if desc.present?
+      content_for :meta_description, desc
+    else
+      content_for?(:meta_description) ? content_for(:meta_description) : APP_CONFIG['default_meta_description']
+    end
+  end
+
 end

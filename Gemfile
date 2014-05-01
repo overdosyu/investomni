@@ -24,7 +24,6 @@ gem 'carrierwave'
 # https://github.com/tyrauber/stock_quote
 gem 'stock_quote'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

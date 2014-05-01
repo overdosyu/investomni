@@ -1,5 +1,6 @@
-<div class="user-profile edit well">
+<% page_title "Edit Profile" %>
 
+<div class="user-profile edit well">
   <%= image_tag @user_profile.avatar.url(:normal).to_s, :class => "img-circle avatar" %>
   <br><br>
 
@@ -28,7 +29,5 @@
       <span class="glyphicon glyphicon-edit"></span>&nbsp;
       Save Profile
     </button>
-
-
   <% end %>
 </div>

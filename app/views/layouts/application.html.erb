@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Investomni</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <title><%= page_title %></title>
+  <%= favicon_link_tag "logo_tiny.ico" %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+  <meta name="keywords" content="<%= meta_keywords %>" />
+  <meta name="description" content="<%= meta_description %>" />
 </head>
 <body>
 <div id="wrap">

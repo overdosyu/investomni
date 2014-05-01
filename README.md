@@ -2,4 +2,4 @@ investomni
 =========
 http://investomni.com/
 
-Tracking & Share your invest idea.
+Track & Share your invest idea.
