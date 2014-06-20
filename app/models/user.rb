@@ -25,8 +25,8 @@ class User < ActiveRecord::Base
                          email: auth.info.email,
                          password: Devise.friendly_token[0,20])
     end
-    p user.profile
-    user.profile.update_attributes(:name => auth.info.name, :avatar => auth.info.image)
+    user.profile.update(name: auth.info.name) unless user.profile.name
+    user.profile.update(avatar: auth.info.image) unless user.profile.avatar
     user
   end
 
